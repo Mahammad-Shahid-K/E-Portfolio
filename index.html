@@ -638,6 +638,90 @@
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
+    <!-- AI Chatbot Widget -->
+    <div id="chatbot-widget" class="chatbot-widget">
+        <!-- Floating Welcome Popup -->
+        <div id="chatbot-welcome-popup" class="chatbot-welcome-popup">
+            <button id="chatbot-popup-close" class="chatbot-popup-close" aria-label="Close welcome message">&times;</button>
+            <div class="popup-text">Hi there! Ask me any questions about my portfolio here. 👋</div>
+        </div>
+
+        <!-- Floating Chat Trigger Button -->
+        <button id="chatbot-toggle-btn" class="chatbot-toggle-btn" aria-label="Open AI Assistant">
+            <span id="chatbot-badge" class="chatbot-badge">1</span>
+            <i class="fa-solid fa-comment-dots chatbot-open-icon"></i>
+            <i class="fa-solid fa-xmark chatbot-close-icon" style="display: none;"></i>
+            <!-- Floating particle effects inside button container -->
+            <div class="chatbot-particles">
+                <span class="particle p1"></span>
+                <span class="particle p2"></span>
+                <span class="particle p3"></span>
+            </div>
+        </button>
+
+        <!-- Chat Window Panel -->
+        <div id="chatbot-window" class="chatbot-window">
+            <!-- Header -->
+            <div class="chatbot-header">
+                <div class="chatbot-avatar-container">
+                    <div class="chatbot-avatar">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <span class="chatbot-status-dot"></span>
+                </div>
+                <div class="chatbot-header-info">
+                    <h3>Portfolio Assistant AI</h3>
+                    <span>Online &bull; Active</span>
+                </div>
+                <div class="chatbot-header-actions">
+                    <button id="chatbot-clear-btn" title="Clear Chat History" aria-label="Clear chat history">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </button>
+                    <button id="chatbot-close-panel" title="Close Chat Window" aria-label="Close chat window">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Messages Box -->
+            <div id="chatbot-messages" class="chatbot-messages">
+                <!-- Welcome Message -->
+                <div class="chat-message bot-msg">
+                    <div class="msg-avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="msg-bubble-container">
+                        <div class="msg-bubble">
+                            Hi 👋, I'm your AI Portfolio Assistant. Ask me about skills, projects, experience, education, certifications, or contact details.
+                        </div>
+                        <span class="msg-timestamp">Just now</span>
+                    </div>
+                </div>
+
+                <!-- Suggested Questions List -->
+                <div class="chat-suggested-container">
+                    <span class="suggested-title">Suggested questions:</span>
+                    <div class="chat-suggested-links">
+                        <button class="suggested-chip" data-question="Tell me about your projects">Tell me about your projects</button>
+                        <button class="suggested-chip" data-question="What technologies do you use?">What technologies do you use?</button>
+                        <button class="suggested-chip" data-question="Show your resume">Show your resume</button>
+                        <button class="suggested-chip" data-question="Contact information">Contact information</button>
+                        <button class="suggested-chip" data-question="Skills & certifications">Skills & certifications</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Input Box -->
+            <form id="chatbot-form" class="chatbot-input-area" autocomplete="off">
+                <button type="button" id="chatbot-voice-btn" class="chatbot-voice-btn" title="Voice Input" aria-label="Voice input">
+                    <i class="fa-solid fa-microphone"></i>
+                </button>
+                <input type="text" id="chatbot-input" placeholder="Type a message or speak..." required aria-label="Type message for AI Assistant">
+                <button type="submit" id="chatbot-send-btn" class="chatbot-send-btn" title="Send Message" aria-label="Send message">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
     <!-- Custom JavaScript -->
     <script src="script.js"></script>
 </body>
