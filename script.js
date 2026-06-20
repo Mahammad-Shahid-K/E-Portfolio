@@ -258,8 +258,7 @@ document.addEventListener("DOMContentLoaded", () => {
        ========================================== */
     const downloadResumeBtn = document.getElementById("download-resume-btn");
     downloadResumeBtn.addEventListener("click", (e) => {
-        // Since we have a dummy resume path, let's log the attempt, or prompt the user.
-        // If a real resume path is required, it can be uploaded as `resume.pdf`.
-        console.log("Resume download requested.");
+        // Log the download event for tracking purposes
+        console.log("Resume download initiated.");
     });
 });
